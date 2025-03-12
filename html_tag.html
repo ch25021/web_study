@@ -10,7 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형웹에서 사용하는 코드이다. -->
     <title>Document</title> <!-- 탭에 보여지는 문자열 -->
     <!-- 화면에 보여지는 부분을 text라고 표현하는데 이 부분은 태그와 태그 사이에 작성된 내용을 의미 -->
- </head>
+<style>
+    table {
+        border: 1px solid blue;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+    td, th {
+        border: 1px solid blue;
+        padding: 5px;
+    }
+</style> 
+
+</head>
  <body> <!-- 화면(웹브라우저 본문)에 보여지는 부분-->
     <div> <!-- 블럭레벨 요소 (한 줄을 다 차지) -->
         <!-- div : 화면을 배치할 때 기본단위로 많이 사용.  div와 같은 역할을 하는 태그 중 구조를 알려주는 태그 (시맨틱태그) 
@@ -39,8 +51,93 @@
         <hr>
         문자열을 작성 중 한줄을 내리고 싶으면 br태그를<br>사용한다.
         <br>hr태그는 수평선 하나를 만들어 준다.<br><hr>
-        
-
+    </div>
+    <div>
+        <p>다양한 텍스트 관련 태그</p>
+        <p><b>굵은글씨</b>: strong, b</p>
+        <p><i>이텔릭체</i>: i, em</p>
+        <p><u>밑줄이 있는 글씨</u>: u, ins</p>
+        <p><s>취소선 글씨</s>: s, del</p>
+    </div>
+    <hr>
+    <div>
+        <p>목록 만들기</p>
+        <ol>
+            <li>순서가 있는 목록 ol태그</li>
+            <li>리스트 내용은 li 태그 안에 기록.</li>
+            <li>순서를 만드는 type 5가지가 있다.</li>
+            <li>ol 태그 내의 type속성으로 지정. </li>
+            <li>값 : 1, A, a, I, i</li>
+            <li>시작번호는 start 속성으로 숫자를 적어준다.</li>
+        </ol>
+        <ul>
+            <li>순서가 없는 목록은 ul 태그를 사용한다.</li>
+            <li>숫자나 문자대신에 블릿이 앞에 붙게 된다.</li>
+            <li>속성은 없고, 사용은 ol 태그와 같이 ul 태그안에 li 태그를 사용해서 목록을 구성한다.</li>
+        </ul>
+        <hr>
+        <div>
+            <p>표 만들기 3X3</p>
+            <table> <!-- 표는 테이블 태그 안에 기록 -->
+                <caption>테이블제목</caption>
+                <tr> <!-- 표의 한 줄을 의미 -->
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                </tr>
+                <tr>
+                    <td>내용1행1열</td>
+                    <td>내용1행2열</td>
+                    <td>내용1행3열</td>
+                </tr>
+                <tr>
+                    <td>내용2행1열</td>
+                    <td>내용2행2열</td>
+                    <td>내용2행3열</td>
+                </tr>
+                <!-- td 태그는 본문내용을 나타내는 열에 주로 사용-->
+            </table>
+            <table>
+                <caption>테이블(rowspan, colspan)</caption>
+                <tr>
+                    <th>제목1</th>
+                    <th colspan="2">제목2, 3</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">내용1, 2행1열</td>
+                    <td>내용1행2열</td>
+                    <td>내용1행3열</td>
+                </tr>
+                <tr>
+                    <td>내용2행2열</td>
+                    <td>내용2행3열</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <p>이미지를 화면에 넣는다</p>
+        <img src="./book-icon.png" alt="대체텍스트">
+        <p>img 태그를 사용한다.</p>
+    </div>
+    <div>
+        <fieldset>
+            <legend>동영상</legend>
+            <video src="./flight.mp4" controls></video>
+            <span> 동영상은 video태그, 음악은 audio 태그를 사용한다.<br>
+            src속성에 경로 & 파일을 지정하고, controls 속성을 넣어 플레이 할 수 있도록 만들 수 있다.
+            </span>
+        </fieldset>
+        <fieldset>
+            <legend>하이퍼링크</legend>
+            <ul>
+                <li>하이퍼링크는 a태그를 사용한다.</li>
+                <li>href 속성에 주소를 입력하여 이동할 수 있도록 만들어 준다.</li>
+                <li><a href="http://www.naver.com">네이버</a></li>
+                <li><a href="http://www.naver.com"><button>네이버</button></a></li>
+            
+            </ul>
+        </fieldset>
     </div>
  </body>
  </html>

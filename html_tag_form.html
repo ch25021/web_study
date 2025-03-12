@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>input 태그</h3>
+        <label for="id"> type="text":</label>
+        <input id="id" placeholder="입력내용설명">
+        <!-- label은 입력내용의 주제(목적) for 속성값과input의 id값으로 매칭을 이룬다.-->
+         <!-- input에 type속성을 지정하지 않으면 type="text"이다. -->
+    <br>
+    <label for="pw">type="password" :</label>
+    <input type="password" id="pw" placeholder="블릿으로 표시">
+    <!-- passwor로 표시된다. 문자로 나오는 것이 아니라 블릿으로 표시-->
+     <br>
+     <label for="maxlengthValue">maxlength,value 속성 : </label>
+     <input id="maxlengthValue" type="text" placeholder="최대크기 및 기본값 입력" value="기본값, 최대길이15" maxlength="15">
+     <br>
+     <label for="email">type="email" :</label>
+     <input id="email" placeholder="이메일형식으로 작성해야 합니다.">
+     <fieldset>
+        <legend>좋아하는 과목: type="checkbox"</legend>
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="javascript">
+        <label for="javascript">JAVASCRIPT</label>
+        <!-- checkbox는 선택/해제가 가능하고 다중선택이 필요한 항목에 사용한다. -->
+     </fieldset>
+     <fieldset>
+        <legend>학년type="radio"</legend>
+        <input type="radio" id="h1" name="high">
+        <label for="h1">1학년</label>
+        <input type="radio" id="h2" name="high">
+        <label for="h2">2학년</label>
+        <input type="radio" id="h3" name="high">
+        <label for="h3">3학년</label>
+        <!-- radio는 nameㅇ 같은 것중하나만 선택이 된다. 여러개 중 반드시 하나가 선택되는 항목에서 사용할 수 있다. -->
+        <!-- 처음에 기본으로 선택되는 항목에는 checked 속성을 부여한다. -->
+     </fieldset>
+     <fieldset>
+        <legend>날짜와 시간</legend>
+        <input type="date">
+        <input type="time">
+     </fieldset>
+     <hr>
+     </div>
+     <form action="#" method="post">
+        <fieldset>
+            <legend>개인정보</legend>
+            <label for="name">이름 : </label>
+            <input id="name">
+            <label for="age">나이 : </label>
+            <input id="age">
+        </fieldset>
+        <fieldset>
+            <legend>취미</legend>
+            <input type="checkbox" id="h1">
+            <label for="h1">운동</label>
+            <input type="checkbox" id="h2">
+            <label for="h2">등산</label>
+            <input type="checkbox" id="h3">
+            <label for="h3">독서</label>
+        </fieldset>
+        <input type="submit" value="등록">
+        <button type="reset" > 다시쓰기</button>
+        
+     </form>
+    
+</body>
+</html>
